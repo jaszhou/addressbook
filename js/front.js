@@ -11,10 +11,10 @@ myneb.setRequest(new HttpRequest("https://mainnet.nebulas.io"));
 var account, tx, txhash;
 
 // MainNet
-//var dappAddress = "n1izjqZTZpVuBXEENAavrowaV1gdjCf2d9t";
+var dappAddress = "n1dwbdKjU4817gMmsCnAQidj5sk7av92oTP";
 
 // TestNet
-var dappAddress = "n1izjqZTZpVuBXEENAavrowaV1gdjCf2d9t";
+// var dappAddress = "n1izjqZTZpVuBXEENAavrowaV1gdjCf2d9t";
 
 
 
