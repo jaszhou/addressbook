@@ -1,0 +1,68 @@
+TX Hash	58d739f8196d6851cc1e43d7eafdc0f0005278ec4235e70e1d3f88ba16dad464
+Contract address	n1yZErVx5R7jTSnUjyoJHcSAScPgAHhKLoJ
+TxReceipt Status	success
+From Address	n1YH9ZfzMyvwnqnDSJVzgfX7jLaur5268qi
+To Address	n1YH9ZfzMyvwnqnDSJVzgfX7jLaur5268qi
+
+n1YH9ZfzMyvwnqnDSJVzgfX7jLaur5268qi
+L46MQeddes0i
+
+
+TX Hash	197401327477a53abbf8215d77b857958e02afd86e223b29a5e8d2884849edc2
+Contract address	n1izjqZTZpVuBXEENAavrowaV1gdjCf2d9t
+TxReceipt Status	pending
+From Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+
+
+TX Hash	dd86a8160a8bce7a56c316f9aa418ccf51fb3bf6ee5038aa330f7db1c802e245
+Contract address	n1u1cHVjKswJAm1LnhGrpMPGP9sVSdR8TJp
+TxReceipt Status	pending
+From Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+To Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+
+
+TX Hash	ff2396384be700c3be221690633cb08bb77744704b81ff0a38814d7551ee461c
+Contract address	n1jKRX8Dp9ovEQ43e6BR3WuTfrNQc46R2ts
+TxReceipt Status	pending
+From Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+
+
+MainNet
+
+TX Hash	30a41d2c78e508edcfb404d95164f939cd88bc394f1541877c2b60446233f377
+Contract address	n1yoR62wDpkunNVUXDsUgt44d4H2vfK67qJ
+TxReceipt Status	pending
+From Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+To Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+
+TX Hash	30a41d2c78e508edcfb404d95164f939cd88bc394f1541877c2b60446233f377
+Contract address	n1yoR62wDpkunNVUXDsUgt44d4H2vfK67qJ
+TxReceipt Status	success
+From Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+To Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+
+TX Hash	57b1917a13f0525976732f4a95cd4f1b6a1d1cb50471017c50d48b19afd39316
+Contract address	n1fiVnaZhUtbpyZiJ87JGKx3qwmp3fUVXbU
+TxReceipt Status	pending
+From Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+To Address	n1YZfgZzVutd1zUfkKrqH1Uga9ZFHphcgBh
+
+http://skyscreening.com:32581/addressbook.html
+
+5d19d0c71bfbb249725bb4537ba037fbef6b5705
+
+a708edac83aa0fabbcbb64176d1fa4d6aa227837
+
+myneb.setRequest(new HttpRequest("https://mainnet.nebulas.io"));
+
+curl -i -k -H Accept:application/json -X POST http://mainnet.nebulas.io:8685/v1/user/accountstate -d '{"address":"n1Th8eSZeDCejMYM66hREDfHKvf6m79RsQv"}'
+
+curl -i -H 'Accept: application/json' -X POST https://mainnet.nebulas.io:8685/v1/admin/transactionWithPassphrase -H 'Content-Type: application/json' -d '{"transaction":{"from":"n1Th8eSZeDCejMYM66hREDfHKvf6m79RsQv","to":"n1fiVnaZhUtbpyZiJ87JGKx3qwmp3fUVXbU", "value":"0","nonce":2,"gasPrice":"1000000","gasLimit":"2000000","contract":{"function":"get","args":"[a708edac83aa0fabbcbb64176d1fa4d6aa227837]"}}, "passphrase": "L46MQeddes0i"}'
+
+{"result":{"txhash":"5337f1051198b8ac57033fec98c7a55e8a001dbd293021ae92564d7528de3f84","contract_address":""}}
+
+pod1:
+kubectl cp bg.jpeg  watsonrobot-3854960451-j7c41:/vol/data/node/neb.js/
+
+pod2:
+cp style.css  watsonrobot-3854960451-6nkxq:/vol/data/super-dictionary-master/

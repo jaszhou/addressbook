@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <title>Hot Coin - Top cryptos on exchanges </title>
+    <link rel="stylesheet" href="lib/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <style>
+        .logo {
+            width: 60%;
+            height: 500px;
+            margin: auto;
+        }
+
+        .name {
+            text-align: center;
+            font-size: 66px;
+            text-shadow: 3px 5px grey, 1px 1px #333;
+        }
+
+        .img {
+            width: 48%;
+            height: 53%;
+            margin: auto;
+            margin-top: 38px;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .search {
+            width: 60%;
+            height: 100px;
+            margin: auto;
+        }
+
+        .noExtension {
+            width: 60%;
+            height: 100px;
+            margin: auto;
+            font-size: 23px;
+        }
+
+        #search_value {
+            width: 80%;
+            height: 50px;
+            box-shadow: 3px 5px grey, 1px 1px #333;
+        }
+
+        .search button {
+            width: 18%;
+            height: 50px;
+            margin-left: 6px;
+            box-shadow: 3px 5px grey, 1px 1px #333;
+        }
+
+         @keyframes rotate {
+            0% { transform:rotateY(0deg);}
+            25% { transform:rotateY(180deg);}
+            50% { transform:rotateY(0deg);}
+            75% { transform:rotateY(180deg);}
+            100% { transform:rotateY(0deg);}
+        }
+
+        .logo_rotate {
+			/*
+            animation: rotate 10s infinite;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+				*/
+            /*  当动画结束时，让<div>元素保留上一个关键帧的样式值 */
+        }
+
+         .result_success {
+            width: 60%;
+            margin: auto;
+        }
+
+        .result_faile{
+            width: 60%;
+            margin: auto;
+        }
+
+        .add_banner{
+            width: 60%;
+            margin: auto;
+        }
+
+        .add_banner input{
+            width: 80%;
+            height: 50px;
+            box-shadow: 3px 5px grey, 1px 1px #333;
+        }
+
+        .add_banner button{
+            width: 18%;
+            height: 50px;
+            margin-left: 6px;
+            box-shadow: 3px 5px grey, 1px 1px #333;
+        }
+
+        #search_banner{
+            font-size: 40px;
+            border-bottom: 1px solid black;
+        }
+
+        p{
+            text-indent:2em;
+            font-size: 20px;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        .contenner{
+            height: 900px;
+        }
+
+        .author{
+            text-align: right;
+        }
+        .author p{
+            display: inline-block;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1 align="center">The Top Rated Cryptos This Week</h1>
+
+<div class="container">
+
+        <div class="container">
+  <p>Based on the votes from users. One user can only vote for one crypto per week.</p>
+  <table id=theTable class="table table-striped">
+    <thead>
+      <tr>
+        <th>Token</th>
+        <th>BlockChain Name</th>
+        <th>Total Votes Received</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="code">NAS</td>
+        <td>Nebulas</td>
+        <td id="id_NAS">1</td>
+        <td><button id=vote>vote</button></td>
+      </tr>
+      <tr>
+        <td id="code">NEO</td>
+        <td>NEO</td>
+        <td id="id_NEO">1</td>
+        <td><button id=vote>vote</button></td>
+      </tr>
+      <tr>
+        <td id="code">ONT</td>
+        <td>Ontology</td>
+        <td id="id_ONT">1</td>
+        <td><button id=vote>vote</button></td>
+      </tr>
+      <tr>
+        <td id="code">ZIL</td>
+        <td>Zilla</td>
+        <td id='id_ZIL'>1</td>
+        <td><button id=vote>vote</button></td>
+      </tr>
+      <tr>
+        <td id="code">BTC</td>
+        <td>BitCoin</td>
+        <td id='id_BTC'>1</td>
+        <td><button id=vote>vote</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+        <div class="noExtension hide" id="noExtension">
+            NOTE: Please install <a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">WebExtensionWallet</a>  to use SUPER DICTIONARY
+        </div>
+
+<!--
+        <div class="search">
+            <input id="search_value" type="text">
+            <button id=search>search</button>
+        </div>
+
+        <div class="result_success hide">
+            <div id=search_banner></div>
+            <p id=search_result> wait for content </p>
+            <div class="author">
+                <i><p> Author:</p> <p id=search_result_author> dasdajkajksdhjasdkjahdkjad</p></i>
+            </div>
+        </div>
+
+        <div class="result_faile hide">
+            Failed to find related information. Do you want to <button id="add">add</button> infromation for "<i id="result_faile_add">asd</i>"?
+        </div>
+-->
+
+        <div class="add_banner hide">
+            <input type="text" id="add_value" placeholder="input contents for your keyword">
+            <button id="push">submit</button>
+            </div>
+    </div>
+    <script src=lib/jquery-3.3.1.min.js></script>
+    <script src=lib/bootstrap-4.0.0-dist/js/bootstrap.min.js></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            $("#search_value").attr("disabled",true)
+            $("#search").attr("disabled",true)
+
+            console.log("web page loaded...")
+            setTimeout(checkNebpay,100);
+
+            var code = ['NAS','ONT','NEO','ZIL','BTC'];
+
+            //var myStringArray = ["Hello","World"];
+            var arrayLength = code.length;
+            for (var i = 0; i < arrayLength; i++) {
+
+              // $(theTable).find('tbody').append( "<tr><td id='code'>NAS</td><td>Nebulas</td><td>1</td><td><button id=vote>vote</button></td></tr>" );
+              //
+              // <tr>
+              //   <td id="code">NAS</td>
+              //   <td>Nebulas</td>
+              //   <td id="id_NAS">1</td>
+              //   <td><button id=vote>vote</button></td>
+              // </tr>
+
+                //alert(myStringArray[i]);
+                setTimeout(find(code[i]),1000);
+                //Do something
+            }
+
+            //setTimeout(loadTable,1000);
+
+        });
+
+        function checkNebpay() {
+            console.log("check nebpay")
+            try{
+                var NebPay = require("nebpay");
+
+                $("#search_value").attr("disabled",false)
+                $("#search").attr("disabled",false)
+
+            }catch(e){
+                //alert ("Extension wallet is not installed, please install it first.")
+                $("#noExtension").removeClass("hide")
+            }
+        }
+
+    var dappAddress = "n1hgoiFmq15rwEsxtrdKBaWhTpEwxPrBvgj";
+
+    function getLen() {
+
+    // get len
+    console.log("********* call smart contract by \"call\" *****************")
+    var func = "len"
+    //var args = "[\"" + $("#search_value").val() + "\"]"
+
+    window.postMessage({
+        "target": "contentscript",
+        "data":{
+            "to" : dappAddress,
+            "value" : "0",
+            "contract" : {
+                "function" : func,
+                "args" :null
+            }
+        },
+        "method": "neb_call"
+    }, "*");
+
+}
+
+function loadTable() {
+
+  console.log("********* call smart contract by \"call\" *****************")
+  var func = "getAll"
+  // var args = "[\"" + $("#search_value").val() + "\"]"
+  var args = "1"
+
+  window.postMessage({
+      "target": "contentscript",
+      "data":{
+          "to" : dappAddress,
+          "value" : "0",
+          "contract" : {
+              "function" : func,
+              "args" :null
+          }
+      },
+      "method": "neb_call"
+  }, "*");
+
+ $(theTable).find('tbody').append( "<tr><td id='code'>NAS</td><td>Nebulas</td><td>1</td><td><button id=vote>vote</button></td></tr>" );
+
+}
+
+function find(code) {
+  console.log("********* call smart contract by \"call\" *****************")
+  var func = "get"
+  var args = "[\"" + code + "\"]"
+
+  window.postMessage({
+      "target": "contentscript",
+      "data":{
+          "to" : dappAddress,
+          "value" : "0",
+          "contract" : {
+              "function" : func,
+              "args" : args
+          }
+      },
+      "method": "neb_call"
+  }, "*");
+
+}
+    //$(table).find('tbody').append( "<tr><td>aaaa</td></tr>" );
+
+        // 搜索功能
+    $("#search").click(function(){
+        // $("#search_value").val() 搜索框内的值
+
+        console.log("********* call smart contract by \"call\" *****************")
+        var func = "get"
+        var args = "[\"" + $("#search_value").val() + "\"]"
+
+        window.postMessage({
+            "target": "contentscript",
+            "data":{
+                "to" : dappAddress,
+                "value" : "0",
+                "contract" : {
+                    "function" : func,
+                    "args" : args
+                }
+            },
+            "method": "neb_call"
+        }, "*");
+
+    })
+
+    $("#vote").click(function(){
+        // $("#search_value").val() 搜索框内的值
+
+        console.log("********* call smart contract by \"call\" *****************")
+        var func = "vote"
+//        var args = "[\"" + $("#code").text() + "\"]"
+        var args = "[\"" + "NAS" + "\"]"
+
+        console.log("args: "+args)
+
+
+        window.postMessage({
+            "target": "contentscript",
+            "data":{
+                "to" : dappAddress,
+                "value" : "0",
+                "contract" : {
+                    "function" : func,
+                    "args" : args
+                }
+            },
+            "method": "neb_call"
+        }, "*");
+
+        find($("#code").text());
+
+    })
+
+    // 添加信息功能
+    $("#add").click(function() {
+        $(".result_faile").addClass("hide");
+        $(".add_banner").removeClass("hide");
+
+        $("#add_value").val("")
+    })
+
+    $("#push").click(function() {
+        console.log("********* call smart contract \"sendTransaction\" *****************")
+        var func = "set"
+        var args = "[\"" + $("#search_value").val() + "\",\"" + $("#add_value").val() + "\"]"
+
+        window.postMessage({
+            "target": "contentscript",
+            "data":{
+                "to" : dappAddress,
+                "value" : "0",
+                "contract" : {
+                    "function" : func,
+                    "args" : args
+                }
+            },
+            "method": "neb_sendTransaction"
+        }, "*");
+    })
+
+
+    // listen message from contentscript
+    window.addEventListener('message', function(e) {
+        // e.detail contains the transferred data
+        console.log("recived by page:" + e + ", e.data:"+ JSON.stringify(e.data));
+        if (!!e.data.data.account){
+            //document.getElementById("accountAddress").innerHTML= "Account address: " + e.data.data.account;
+        }
+        if (!!e.data.data.receipt){
+            //document.getElementById("txResult").innerHTML = "Transaction Receipt\n" +  JSON.stringify(e.data.data.receipt,null,'\t');
+        }
+        if (!!e.data.data.neb_call){
+            var result = e.data.data.neb_call.result
+             console.log("return of rpc call: " + JSON.stringify(result))
+
+            if (result === 'null'){
+                $(".add_banner").addClass("hide");
+                $(".result_success").addClass("hide");
+
+                $("#result_faile_add").text($("#search_value").val())
+
+                $(".result_faile").removeClass("hide");
+            } else{
+
+                try{
+                    result = JSON.parse(e.data.data.neb_call.result)
+                }catch (err){
+
+                }
+
+                if (!!result.key){
+                    $(".add_banner").addClass("hide");
+                    $(".result_faile").addClass("hide");
+
+                    $("#search_banner").text($("#search_value").val())
+                    $("#search_result").text(result.value)
+
+                     // update poll
+                    //$("#(result.key)").text(result.poll)
+
+                    $('#id_' + result.key).text(result.poll);
+
+                    //var code = ['NAS','ONT','NEO','ZIL','BTC'];
+
+                    $("#search_result_author").text(result.author)
+
+                    $(".result_success").removeClass("hide");
+                } else {
+                    $(".add_banner").addClass("hide");
+                    $(".result_faile").addClass("hide");
+
+                    $("#search_banner").text($("#search_value").val())
+                    $("#search_result").text(result)
+
+                    $("#search_result_author").text("")
+
+                    $(".result_success").removeClass("hide");
+                }
+
+            }
+
+        }
+    });
+
+
+</script>
+</body>
+
+</html>
